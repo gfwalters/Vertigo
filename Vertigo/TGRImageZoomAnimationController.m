@@ -115,10 +115,6 @@
     CGRect transitionViewFinalFrame = [transitionContext.containerView convertRect:self.referenceImageView.bounds
                                                                           fromView:self.referenceImageView];
     
-    if (UIApplication.sharedApplication.isStatusBarHidden && ![toViewController prefersStatusBarHidden]) {
-        transitionViewFinalFrame = CGRectOffset(transitionViewFinalFrame, 0, 20);
-    }
-    
     // Create a temporary view for the zoom out transition based on the image
     // view controller contents
     UIImageView *transitionView = [[UIImageView alloc] initWithImage:fromViewController.imageView.image];
